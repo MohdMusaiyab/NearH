@@ -2,7 +2,16 @@ import mongoose from "mongoose";
 
 const hospitalSchema = new mongoose.Schema(
   {
+    creator: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     name: {
+      type: String,
+      required: true,
+    },
+    address:{
       type: String,
       required: true,
     },
@@ -63,4 +72,4 @@ const hospitalSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("hospital", hospitalSchema);
+export default mongoose.model("Hospital", hospitalSchema);
