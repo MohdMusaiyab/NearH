@@ -9,6 +9,7 @@ import Footer from "./components/Footer.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import About from "./pages/About.jsx";
 import HospitalDetails from "./pages/HospitalDetails.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/sign-up" element={<SignUp></SignUp>} />
       <Route path="/about" element={<About></About>} />
       <Route path="/hospital/:id" element={<HospitalDetails></HospitalDetails>} />
+      <Route path="/dashboard/:id" element={<Dashboard></Dashboard>}></Route>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>

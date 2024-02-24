@@ -2,12 +2,14 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import morgan from "morgan";
+import cors from "cors";
 import bodyParser from "body-parser";
 import hospitalRoutes from "./routes/hospitalRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
  dotenv.config();
  // Connect to MongoDB
  const app = express();
+ app.use(cors());
  app.use(bodyParser.json());
  mongoose
  .connect(process.env.MONGO)
