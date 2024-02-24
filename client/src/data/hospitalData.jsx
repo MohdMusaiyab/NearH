@@ -2,6 +2,7 @@ export const dummyHospitalData = [
     {
       creator: "65d9bd4e237b3a47bbfe055e",
       address:"123 Main St, New York, NY 10001",
+      image:'https://media.gettyimages.com/id/1312706413/photo/modern-hospital-building.jpg?s=612x612&w=gi&k=20&c=1-EC4Mxf--5u4ItDIzrIOrduXlbKRnbx9xWWtiifrDo=',
       name: "Hospital Alpha",
       services: [
         { service: "Emergency Care", rate: 25 },
@@ -22,6 +23,7 @@ export const dummyHospitalData = [
       creator: "user456",
       address:"456 Elm St, New York, NY 10002",
       name: "Hospital Beta",
+      image:'https://media.istockphoto.com/id/855680246/photo/building-with-large-h-sign-for-hospital.jpg?s=612x612&w=0&k=20&c=IspfscB43a6AjsTTcXbOCmcxLiTG4DVW4HSO9i5IycA=',
       services: [
         { service: "Maternity", rate: 22 },
         { service: "Pediatrics", rate: 18 }
@@ -41,6 +43,7 @@ export const dummyHospitalData = [
       creator: "user789",
       name: "Hospital Gamma",
       address:"789 Oak St, New York, NY 10003",
+      image:'https://images.pexels.com/photos/668298/pexels-photo-668298.jpeg?cs=srgb&dl=pexels-jonathan-meyer-668298.jpg&fm=jpg',
       services: [
         { service: "Diagnostics", rate: 20 },
         { service: "Oncology", rate: 35 }
@@ -60,6 +63,7 @@ export const dummyHospitalData = [
       creator: "user101",
       name: "Hospital Delta",
       address:"101 Pine St, New York, NY 10004",
+      image:'https://www.carehospitals.com/assets/images/main/vizag-health-city-768x477.png',
       services: [
         { service: "Orthopedics", rate: 28 },
         { service: "Rehabilitation", rate: 23 }
@@ -79,6 +83,7 @@ export const dummyHospitalData = [
       creator: "user202",
       name: "Hospital Epsilon",
       address:"202 Cedar St, New York, NY 10005",
+      image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHQ3J7t1GTpi3AFWPhvRCT7YevPqKhR-nehA2JU6cuMw&s',
       services: [
         { service: "Psychiatry", rate: 26 },
         { service: "Counseling", rate: 18 }
@@ -93,6 +98,6 @@ export const dummyHospitalData = [
       bloodRequired: ["B", "O+"],
       phoneNumber: "555-8765",
       callAmbulance: false
-    }
+    }   
   ];
   
