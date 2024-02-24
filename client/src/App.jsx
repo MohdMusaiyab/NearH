@@ -5,9 +5,9 @@ function App() {
     <>     
       {/* Main Content */}
       <main className="container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4">Welcome to NearH..!</h1>
+        <h1 className="text-3xl font-bold mb-4 ml-5">Welcome to NearH..!</h1>
         {/* Search Box */}
-        <div className="w-1/2 mb-8">
+        <div className="w-1/2 mb-8/ ml-5">
           <input
             type="text"
             placeholder="Search..."
