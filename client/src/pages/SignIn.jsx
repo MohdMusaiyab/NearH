@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Tilt from 'react-parallax-tilt'
+import {Link} from 'react-router-dom'
 const SignIn = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -61,7 +62,7 @@ const SignIn = () => {
 
           {/* Link to Registration Page */}
           <p className="mt-4 text-sm text-white">
-            Don't have an account? <a href="/register" className="hover:underline">Register</a>
+            Don't have an account? <Link to={"/sign-up"} className="hover:underline">Register</Link>
           </p>
         </div>
       </div>
