@@ -3,7 +3,7 @@ import logo from "../assets/logo.jpg";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <header className="bg-gray-800 text-white py-4">
+    <header className="bg-blue-700 text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo and Site Name */}
         <div>
