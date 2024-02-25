@@ -20,7 +20,7 @@ export const dummyHospitalData = [
       callAmbulance: true
     },
     {
-      creator: "user456",
+      creator: "65da358da39c45d8f0773cba",
       address:"456 Elm St, New York, NY 10002",
       name: "Hospital Beta",
       image:'https://media.istockphoto.com/id/855680246/photo/building-with-large-h-sign-for-hospital.jpg?s=612x612&w=0&k=20&c=IspfscB43a6AjsTTcXbOCmcxLiTG4DVW4HSO9i5IycA=',
