@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useDispatch , useSelector } from "react-redux";
+import { signInComplete,signInFailure,signInSuccess,signOutUserStart,signInStart } from "../redux/user/userSlice";
 const SignIn = () => {
+  const dispatch = useDispatch();
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -25,28 +28,36 @@ const SignIn = () => {
     e.preventDefault();
     // Add your sign-in logic here
     try {
+      dispatch(signInStart());
       const data = await axios.post(
         "http://localhost:3000/api/v1/auth/sign-in",
         formData
       );
-      console.log(data?.data?.token);
+      // console.log(data?.data?.token);
       if (data?.data?.success) {
         localStorage.setItem("token", data?.data?.token);
         localStorage.setItem("user", JSON.stringify(data?.data?.user));
+        dispatch(signInSuccess(data?.data?.user));
+        // console.log(data+'User from Sign in'); 
         toast.success("Logged in successfully");
         setError(false);
         setErrorMessage("");
         navigate(`/dashboard/${data?.data?.user.id}`);
       } else {
+        dispatch(signInFailure(res?.data?.message));
         toast.error(data?.data?.message);
         setErrorMessage(data?.data?.message);
         setError(true);
       }
     } catch (err) {
+      dispatch(signInFailure(error?.response?.data?.message));
       console.log(err);
       toast.error("Something went wrong");
       setErrorMessage(err?.response?.data?.message);
       setError(true);
+    }
+    finally{
+      dispatch(signInComplete());
     }
   };
 

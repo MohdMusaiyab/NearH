@@ -7,6 +7,9 @@ const hospitalSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+    image: {
+      type: String,
+    },
     name: {
       type: String,
       required: true,
@@ -28,15 +31,12 @@ const hospitalSchema = new mongoose.Schema(
     patientsNo: {
       type: Number,
       default: 0,
-      required: true,
     },
     availableBeds: {
       type: Number,
-      required: true,
     },
     totalBeds: {
       type: Number,
-      required: true,
     },
     doctors: [
       {
@@ -47,11 +47,7 @@ const hospitalSchema = new mongoose.Schema(
         specialty: {
           type: String,
           required: true,
-        },
-        experience: {
-          type: Number,
-          required: true,
-        },
+        }
       },
     ],
     bloodRequired: [

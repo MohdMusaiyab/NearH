@@ -10,6 +10,7 @@ const SignUp = () => {
     username: "",
     password: "",
   });
+  const[error,setError]=useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,11 +27,13 @@ const SignUp = () => {
         "http://localhost:3000/api/v1/auth/sign-up",
         formData
       );
-      console.log(data);
+      // console.log(data+'data');
       toast.success("Sign Up Successful");
       navigate("/sign-in");
     } catch (err) {
-      console.log(err);
+      // console.log(err?.response +"response") 
+      setError(err.response.data.message);
+      console.log(error);
     }
   };
   return (
@@ -96,6 +99,7 @@ const SignUp = () => {
               Sign In
             </Link>
           </p>
+          {error && <p className="text-red-500">{error}</p>}
         </div>
       </div>
 
